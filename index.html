@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SAYG Sock Pattern</title>
+</head>
+<body>
+    <h1>SAYG Sock Pattern Generator</h1>
+    <p>
+        This is a pattern generator for Sew-As-You-Go Sock on a single bed flat bed knitting machine.
+        No ribber required! This pattern is designed for you to use any yarn, any gauge and any foot size.
+        This is a cuff down pattern with a 2x1 mock rib folded cuff. If you would like to use a different type of cuff,
+        you are welcome to modify this.
+    </p>
+    <p>
+        You will, first, need to create a gauge swatch with your yarn of choice at your desired tension.
+        Then, you will input your measurements into the calculator below, and it will generate a pattern for you.
+    </p>
+    <p>
+        This SAYG sock method is based on
+        <a href="https://www.youtube.com/watch?v=hiFB5KsnEN0">Diana Sullivan's sock tutorial.</a>
+        Please watch her video for details on this method. She suggests using a solid or variegated yarn for this project.
+        Striping yarns won't line up correctly.
+    </p>
+    <p>
+        All dimensions should be input as inches.
+    </p>
+
+    <form name="calcInputs" action="" method="get" id = "calcInputs">
+        <label><strong>Swatch Gauge</strong></label><br>
+        <label for="tension">Tension: </label>
+        <input type="number" id="tension" name="tension" value="4"><br>
+        <label for="st_in">Stitches per in: </label>
+        <input type="number" id="st_in" name="st_in" value="9" step=".01"><br>
+        <label for="rows_in">Rows per in: </label>
+        <input type="number" id="rows_in" name="rows_in" value="12" step=".01"><br><br>
+        <label><strong>Sock Dimensions</strong></label><br>
+        <label for="foot_circ">Foot Circumference:</label>
+        <input type="number" id="foot_circ" name="foot_circ" value="" step=".01"><br>
+        <label for="cuff_length">Cuff Length:</label>
+        <input type="number" id="cuff_length" name="cuff_length" value="" step=".01"><br>
+        <label for="cuff_to_heel">Cuff to Heel:</label>
+        <input type="number" id="cuff_to_heel" name="cuff_to_heel" value="" step=".01"><br>
+        <label for="heel_to_toe">Heel to Toe Length:</label>
+        <input type="number" id="heel_to_toe" name="heel_to_toe" value="" step=".01"><br>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h2>SAYG Sock Pattern</h2>
+
+    <h3>Mock Rib Folded Cuff</h3>
+    <ol>
+        <li>Cast on <span id="cast_on_sts">XX</span> in 2x1 rib.</li>
+        <li>Knit a few rows of waste yarn and ravel cord.</li>
+        <li>Tension <span id="rib_tension">XX</span>, MC yarn, Knit <span id="cuff_rows">XX</span> rows.</li>
+        <li>Rehang your live stitches to create the folded cuff. Remove waste yarn.</li>
+        <li>Tension <span id="main_tension">XX</span>, Knit <span id="ankle_rows">XX</span> rows to the heel.</li>
+    </ol>
+
+    <h3>Short Row Heel</h3>
+    <ol start="6">
+        <li>Set carriage to hold. Short row heel to <span id="heel_center_sts">XX</span> center stitches. Decreasing 1 stitch each row.</li>
+        <li>Short row heel back out full length of cast on. Increasing 1 stitch each row.</li>
+        <li>Knit <span id="sole_rows">XX</span> rows to the toe.</li>
+    </ol>
+
+    <h3>Short Row Toe</h3>
+    <ol start="9">
+        <li>The toe is shaped the same way as the heel. Set carriage to hold. Short row to <span id="toe_center_sts">XX</span> center stitches. Decreasing 1 stitch each row.</li>
+        <li>Short row back out full length of cast on. Increasing 1 stitch each row.</li>
+    </ol>
+
+    <h3>Top of Sock</h3>
+    <ol start="11">
+        <li>Knit back up the top of the sock making sure you pick up each row only one time.</li>
+        <li>Complete the cuff and cast off.</li>
+    </ol>
+
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
